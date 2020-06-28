@@ -1,0 +1,35 @@
+-> adminpanel 
+  install axios , react-router-dom 
+  npm install axios react-router-dom --save 
+-> src/create components folder /then create 2 components  
+  -> Login 
+  -> NotFound 
+  then apply the routing in App.js
+  import React from 'react';
+import {BrowserRouter as Router , Route , Switch} from 'react-router-dom';
+import Login from './components/Login';
+import Notfound from './components/Notfound';
+function App() {
+  return (
+    <div>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Login}/>
+          <Route component={Notfound}/>
+        </Switch>
+      </Router>
+    </div>
+  );
+}
+-> install bootstrap 
+npm install bootstrap --save 
+  bootstrap need jquery and popper.js file 
+npm install jquery popper.js --save
+
+
+
+
+
+
+
+

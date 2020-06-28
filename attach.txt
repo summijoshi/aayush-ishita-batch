@@ -1,0 +1,24 @@
+-> When u upload any attachment to the server we cant set the state value in the file file file . To solve this issue 
+  eg:
+<input type="file" name="att" onChange={this.attach}/>
+
+ attach=(event)=>
+ {
+   if(event.target.files.length>0)
+   {
+       let attachdata=event.target.files[0];
+   }
+ } 
+ -> When we send any attachment from react to node , we send the data with the help of FormData Object. 
+ -> How we upload file in node | express 
+   we have 1 middleware (multer) 
+   backend 
+   npm install multer --save 
+
+
+
+
+
+
+
+

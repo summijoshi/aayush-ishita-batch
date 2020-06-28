@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import {BrowserRouter as Router , Route , Switch} from 'react-router-dom';
+import Login from './components/Login';
+import Notfound from './components/Notfound';
+import Dashboard from './components/Dashboard';
+import ChangePass from './components/ChangePass';
+import Category from './components/Category';
+import Addcat from './components/Addcat';
+import Editcat from './components/Editcat';
+import Product from './components/Product';
+import Addpro from './components/Addpro';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Login}/>
+          <Route path="/dashboard" exact component={Dashboard}/>
+          <Route path="/dashboard/changepassword" exact component={ChangePass}/>
+          <Route path="/dashboard/category" exact component={Category}/>
+          <Route path="/dashboard/addcat" exact component={Addcat}/>
+          <Route path="/dashboard/addpro" exact component={Addpro}/>
+          <Route path="/dashboard/product" exact component={Product}/>
+          <Route path="/dashboard/editcat/:cid" exact component={Editcat}/>
+          <Route component={Notfound}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
