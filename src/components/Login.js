@@ -32,7 +32,7 @@ export class Login extends Component {
                <main>
                    <header className="jumbotron">
                 <h1 className="text-center">
-                    Admin Panel
+                    Admin Panel (Sumit Joshi)
                 </h1>
                    </header>
                    <section className="container">
